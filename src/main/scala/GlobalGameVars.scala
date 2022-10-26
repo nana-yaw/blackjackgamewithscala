@@ -70,5 +70,5 @@ package object GameBoard {
 
   val deck: ListBuffer[CardSuit] = ListBuffer(allHearts, allSpades, allClubs, allDiamonds).flatten
 
-  val numberOfPlayers: ListBuffer[Player] = ListBuffer.empty[Player]
+  var numberOfPlayers: ListBuffer[Player] = ListBuffer.empty[Player]
 }
