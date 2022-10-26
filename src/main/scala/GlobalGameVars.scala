@@ -1,4 +1,4 @@
-import card.{CardValue, Clubs, Diamonds, Hearts, Spades}
+import card.{CardSuit, CardValue, Clubs, Diamonds, Hearts, Spades}
 import player.Player
 
 import scala.collection.mutable.ListBuffer
@@ -67,6 +67,8 @@ package object GameBoard {
     Spades(CardValue.King),
     Spades(CardValue.Ace)
   )
+
+  val deck: ListBuffer[CardSuit] = ListBuffer(allHearts, allSpades, allClubs, allDiamonds).flatten
 
   val numberOfPlayers: ListBuffer[Player] = ListBuffer.empty[Player]
 }
