@@ -16,7 +16,6 @@ class CardPlayStrategyTest extends FunSuite {
   }
 
   test("when total card value is less than 17 then they hit") {
-    // given
     yaw.totalCardsWithPlayer += Hearts(Seven)
     yaw.totalCardsWithPlayer += Clubs(Six)
     assertEquals(isHit(yaw), true)

@@ -2,9 +2,7 @@ package gamerules
 
 import GameBoard.deck
 import card.CardSuit
-import gamerules.CardActions.shuffleCard
 import player.Player
-
 import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer
 import scala.util.Random
