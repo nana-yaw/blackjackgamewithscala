@@ -8,7 +8,8 @@ import scala.collection.mutable.ListBuffer
 object GameOver {
   def isAllPlayerStick(allPlayers: ListBuffer[Player]): Boolean = allPlayers.forall(Player => Player.currentStrategy == "STICK")
 
-  def isPlayerScoreTwentyOne(player: Player): Boolean = getSumCardValues(player) == 21
+  def isAnyPlayerScoreTwentyOne(allPlayers: ListBuffer[Player]): Boolean = allPlayers.exists(Player => getSumCardValues(Player) == 21)
 
-  def isLastPlayerLeft(player: Player): Boolean = player.currentStrategy == "HIT" || player.currentStrategy == "STICK"
+  def isLastPlayerLeftWithNoBurst(allPlayers: ListBuffer[Player]): Boolean = allPlayers.exists(Player => Player.currentStrategy == "HIT") ||
+    allPlayers.exists(Player => Player.currentStrategy == "STICK")
 }
